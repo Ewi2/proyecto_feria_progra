@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firefly</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: rgb(163, 148, 148);
+        }
+        h1 {
+            font-size: 75px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #data-btn {
+            padding: 10px 20px;
+            background-color: rgb(220, 153, 8);
+            color: rgb(30, 29, 29);
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #data-btn:hover {
+            background-color: #d1d986;
+        }
+    </style>
+</head>
+<body>
+    <img src="{% static 'firefly.png' %}" style="width: 25%; height: auto;">
+
+    <h1>Bienvenid@s a Firefly</h1>
+    <a href="{% url 'dato' %}" id="data-btn">Datos</a>
+</body>
+</html>
+
+

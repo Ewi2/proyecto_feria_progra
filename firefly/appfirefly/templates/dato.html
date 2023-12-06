@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Datos de Firefly</title>
+
+    <style>
+        h1 {
+            color: rgb(143, 192, 237);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px; /* Corregí el valor de tamaño de fuente */
+        }
+        h2 {
+            color: rgb(146, 183, 146);
+            font-family: Arial;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto; /* Centra la tabla horizontalmente */
+            margin-bottom: 40px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center; /* Centra el texto horizontalmente en las celdas */
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Lista de Datos de Firefly</h1>
+    
+    <h2 align="center">Datos de Concentración de Gases</h2>
+    <table border="1" align="center">
+        
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Concentración de Gases</th>
+        </tr>
+        {% for dato in Dato %}
+        <tr>
+            
+            <td>{{ dato.id }}</td>
+            <td>{{ dato.fecha }}</td>
+            <td>{{ dato.concentracion_gases }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
